@@ -5,7 +5,7 @@ private String name ;
 private String dueDate ; 
 private String status ; 
 private Project project ; 
-
+private boolean updated ;
 //generating accessors and mutators for fields 
 
 public String getName()
@@ -48,6 +48,26 @@ public void setProject (Project project)
 	this.project = project ;
 }
 
+public void Update()
+ {
+	 this.updated = true ;
+ }
 
+public boolean isUpdated()
+{
+  return updated ;	
+}
+ 
+
+public Task (String name , String dueDate , Project project)
+{
+	setName(name);
+    setdueDate(dueDate);
+    setStatus("Incomplete");
+    setProject(project);
+    updated=false ;
+    
+}
+public Task () {}
 
 }

@@ -1,61 +1,24 @@
-import java.util.Scanner;
+import java.sql.* ;
 public class test {
 
+	//adding driver jar to project for sql class methods to work 
+	
 	public static void main(String[] args) {
-		Scanner scan =  new Scanner (System.in); 
-		
-      
-         String inputs = null ;
-         boolean quit = false ; 
-         while (quit = true ) {
-          System.out.println("Enter a word");
-          inputs = scan.nextLine();
-          scan.next();
-          quit=inputs.contentEquals("quit") ;
-         System.out.println(inputs);
-         if (inputs.contentEquals("repeat") )
-         {
-        	 System.out.println(inputs);
-        	 System.out.println("repeating");
-         }
-
-         else if (inputs.contentEquals("hi"))
-         {
-        	 System.out.println("hi back");
-        	
-         }
-         
-         }
-        	
-         System.out.println("Exited");
-    
-		
-		
-		/*
-		int l = -1 ; 
-		 while (l != 0) {
-	          System.out.println("Enter a word");
-	       
-	          l = scan.nextInt();
-	         // System.out.println(inputs);
-	         if (l == 1 )
-	         {
-	        	 System.out.println(l);
-	        	 System.out.println("here1");
-	         }
-
-	         else if (l == 2)
-	         {
-	        	 System.out.println("hi back");
-	        	 System.out.println("here2");
-	         }
-	         
-	         }
-	        	
-	         System.out.println("Exited");
-		*/
-		
-         
+	
+	
+	
+	TaskRegister register1 = new TaskRegister () ; 
+   
+	Project project1 = new Project ("Project1", "22-10-19") ;
+    register1.createTask("task11", "22-1099", project1);
+    //Task task1 = new Task("task1","dec","Done",project1);
+	//DBConnector dbconnector1 = new DBConnector () ;
+	
+	//register1.addProject("project1", "22-5-19");
+	
+     
+	System.out.println(register1.findTask("task11").getName());
+	
 	}
 
 }
